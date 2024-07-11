@@ -3,13 +3,13 @@ import {
   Nullish,
   Status,
   _BaseProps,
-} from 'cowpoke-types/_base'
+} from '@/app/types/cowpoke/_base'
 import {
   DeleteRequestClient,
   IndexRequestClient,
   ReadRequestClient,
   UpdateRequestClient,
-} from 'cowpoke-types/entity'
+} from '@/app/types/cowpoke/entity'
 import { PropsWithChildren } from 'react'
 
 export interface collectionState<T> {

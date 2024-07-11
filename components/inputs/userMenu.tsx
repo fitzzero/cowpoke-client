@@ -6,8 +6,8 @@ import { useSocket } from '@/app/cowpoke/providers/socketProvider'
 import { useRouter } from 'next/navigation'
 import { AdminPaths } from '@/app/admin/adminPage'
 import { UserPaths } from '@/app/user/userPage'
-import { AccessLevels } from '../../enums'
 import { hasAccess } from '../../lib/access'
+import { AccessLevels, EntityKinds } from '@/app/types/cowpoke/common'
 
 export const UserAvatarMenu = () => {
   const { connected, scopes } = useSocket()
@@ -28,7 +28,7 @@ export const UserAvatarMenu = () => {
       </MenuButton>
       <Menu>
         <MenuItem onClick={() => router.push(UserPaths.Base)}>Profile</MenuItem>
-        {hasAccess('user', AccessLevels.ModerateEntity, scopes) ? (
+        {hasAccess(EntityKinds.User, AccessLevels.ModerateEntity, scopes) ? (
           <MenuItem onClick={() => router.push(AdminPaths.Base)}>
             Admin
           </MenuItem>

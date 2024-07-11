@@ -1,5 +1,5 @@
+import { UserBasic } from '@/app/types/cowpoke/user'
 import { Avatar, AvatarProps, Badge, badgeClasses } from '@mui/joy'
-import { UserBasic } from 'cowpoke-types/user'
 
 interface OnlineAvatarProps extends AvatarProps {
   user?: UserBasic

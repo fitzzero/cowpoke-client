@@ -1,4 +1,4 @@
-import { Id, Nullish } from 'cowpoke-types/_base'
+import { Id, Nullish } from '@/app/types/cowpoke/_base'
 import { findIndex } from 'lodash'
 
 export const updateOne = <T>(

@@ -3,10 +3,10 @@ import { useSocket } from '../providers/socketProvider'
 import { logStart, logStatus } from '../lib/logger'
 import {
   CustomRequestClient,
-  EntityKinds,
   EntityResponse,
   RequestProps,
-} from 'cowpoke-types/entity'
+} from '@/app/types/cowpoke/entity'
+import { EntityKinds } from '@/app/types/cowpoke/common'
 
 interface UseEntityMethodProps {
   entity: EntityKinds

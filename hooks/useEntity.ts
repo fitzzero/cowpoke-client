@@ -1,5 +1,5 @@
 'use client'
-import { Id, Nullish, Status, _BaseProps } from 'cowpoke-types/_base'
+import { Id, Nullish, Status, _BaseProps } from '@/app/types/cowpoke/_base'
 import { useEffect, useMemo, useState } from 'react'
 import { useSocket } from '../providers/socketProvider'
 import { logEnd, logStart, logStatus, logSuccess } from '../lib/logger'
@@ -7,12 +7,10 @@ import {
   Callback,
   CreateRequestCallback,
   CreateRequestClient,
-  CreateRequestProps,
   DeleteRequestCallback,
   DeleteRequestClient,
   DeleteRequestProps,
   DeleteResult,
-  EntityKinds,
   EntityResponse,
   ReadRequestCallback,
   ReadRequestClient,
@@ -20,7 +18,8 @@ import {
   UpdateRequestCallback,
   UpdateRequestClient,
   UpdateRequestProps,
-} from 'cowpoke-types/entity'
+} from '@/app/types/cowpoke/entity'
+import { EntityKinds } from '@/app/types/cowpoke/common'
 
 interface UseEntityProps<T> {
   _id?: string

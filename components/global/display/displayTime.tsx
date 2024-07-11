@@ -1,4 +1,4 @@
-import { TimeFormats } from '@/app/cowpoke/enums'
+import { TimeFormats } from '@/app/types/cowpoke/common'
 import { Tooltip, Typography, TypographyProps } from '@mui/joy'
 import moment from 'moment'
 

@@ -9,9 +9,9 @@ import {
   useState,
 } from 'react'
 import { Socket, io } from 'socket.io-client'
-import { EntityResponse } from 'cowpoke-types/entity'
-import { AccessProps, Scopes } from 'cowpoke-types/access'
-import { Status } from 'cowpoke-types/_base'
+import { EntityResponse } from '@/app/types/cowpoke/entity'
+import { AccessProps, Scopes } from '@/app/types/cowpoke/access'
+import { Status } from '@/app/types/cowpoke/_base'
 import { logAlert, logSuccess, logStart } from '../lib/logger'
 
 interface state {

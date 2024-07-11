@@ -1,17 +1,17 @@
 'use client'
-import { IndexCollection, Status, _BaseProps } from 'cowpoke-types/_base'
+import { IndexCollection, Status, _BaseProps } from '@/app/types/cowpoke/_base'
 import { useEffect, useMemo, useState } from 'react'
 import { useSocket } from '../providers/socketProvider'
 import { logEnd, logStart, logStatus } from '../lib/logger'
 import {
-  EntityKinds,
   IndexOptions,
   IndexRequestCallback,
   IndexRequestClient,
   IndexRequestProps,
   UpdateRequestClient,
-} from 'cowpoke-types/entity'
+} from '@/app/types/cowpoke/entity'
 import { updateOne } from '../lib'
+import { EntityKinds } from '@/app/types/cowpoke/common'
 
 interface UseIndexProps<T> extends IndexOptions {
   entity: EntityKinds

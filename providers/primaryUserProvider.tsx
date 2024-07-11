@@ -1,10 +1,11 @@
 'use client'
 import { PropsWithChildren, createContext, useContext } from 'react'
-import { Nullish, Status } from 'cowpoke-types/_base'
-import { UserProps } from 'cowpoke-types/user'
+import { Nullish, Status } from '@/app/types/cowpoke/_base'
+import { UserProps } from '@/app/types/cowpoke/user'
 import { useEntity } from '../hooks/useEntity'
-import { EntityKinds, ReadRequestClient } from 'cowpoke-types/entity'
+import { ReadRequestClient } from '@/app/types/cowpoke/entity'
 import { useSocket } from './socketProvider'
+import { EntityKinds } from '@/app/types/cowpoke/common'
 
 interface state<T = UserProps> {
   user?: T | Nullish
@@ -24,7 +25,7 @@ export const UserPrimaryProvider = (props: PropsWithChildren) => {
     updateRequest: userUpdate,
     values: user,
   } = useEntity<UserProps>({
-    entity: 'user',
+    entity: EntityKinds.User,
     _id: userId,
   })
 

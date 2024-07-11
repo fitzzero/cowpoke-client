@@ -1,7 +1,7 @@
 import { getEnumKeys } from '@/app/cowpoke/lib/enum'
+import { Status } from '@/app/types/cowpoke/_base'
 import { Chip, Typography } from '@mui/joy'
 import { Stack } from '@mui/material'
-import { Status } from 'cowpoke-types/_base'
 import { PropsWithChildren } from 'react'
 
 export interface ChipEnumProps extends PropsWithChildren {
